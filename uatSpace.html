@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--Week 1 assignment, html tags
+Assignment: Mission Control, We Have Blastoff!
+Josh Bechtel
+josbech1@uat.edu-->
+
+
+<html>
+
+    <head>
+        <script src="launchDataDis.js"></script>
+        <script src=code.js> </script>
+        <script src="dataLoader-1.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>
+            Josh Bechtel's UATSpace Page
+        </title>
+        <script>
+            var theTime = new Date();
+            var time_interval = 5000;
+            var last_iteration = 0;
+            var running = true;
+            var index = 0;
+            var timer;
+            var data = getData();
+        </script>
+    </head>
+   
+
+    
+    <body>
+
+        <!--Table to hold UAT Space logo and header text-->
+        <table>
+            <tr>
+                <td><img src="UATspaceLogo-2.jpg"></td>
+                <td> 
+                    <h1 class="title">
+                    UAT Space Program
+                    </h1>
+                </td>
+            </tr>
+            
+        </table>
+
+        <!--Data table-->
+        <table id="data" border="2" width="70%" class="dtable">
+            <col style="width: 35%;">
+            <col style="width: 35%;">
+            <thead>
+                <th>
+                    Data Type
+                </th>
+                <th>
+                    Reading
+                </th>
+            </thead>
+            <tbody>
+                <tr id="seconds"></tr>
+                <tr id="latitude"></tr>
+                <tr id="longitude"></tr>
+                <tr id="gps_altitude"></tr>
+                <tr id="bmp_altitude"></tr>
+                <tr id="bmp_pressure"></tr>
+                <tr id="bmp_temperature"></tr>
+                <tr id="digtemp"></tr>
+                <tr id="csstemp"></tr>
+                <tr id="css_eCO2"></tr>
+                <tr id="css_TVOC"></tr>
+                <tr id="UV"></tr>
+                <tr id="accelX"></tr>
+                <tr id="accelY"></tr>
+                <tr id="accelZ"></tr>
+                <tr id="magneticX"></tr>
+                <tr id="magneticY"></tr>
+                <tr id="magneticZ"></tr>
+                <tr id="gyroX"></tr>
+                <tr id="gyroY"></tr>
+                <tr id="gyroZ"></tr>
+            </tbody>
+
+        </table>
+        
+       
+        <script>
+            //test use of document.write
+            //document.write("This is a test of the document.write function");
+
+       </script>
+        <!--Countdown timer title-->
+        <h2>Countdown Timer</h2>
+        <!--Status of current countdown timer-->
+     <div id="countdownStatus">Timer Status</div><br>
+        <!--Adds functionality to start button-->
+        <button onclick="blastoffTimerV4();" class="button" id="startButton">Start</button>
+        <button onclick="stopTimer();" class="button" id="stopButton">Stop</button>
+        <br>
+        <h2>Please try your hand at Craps!</h2>
+        <br>
+        <div id="crapsStatus">Craps Status </div>
+        <!--Sets blank images before dice are rolled and sets the size to 50x50 on each dice image-->
+        <img src="images/clear.png" width="50" height="50" id="diceImage">  <img src="images/clear.png" width="50" height="50" id="diceImage2">
+        <br>
+        <button onclick="playCraps();" class="button">Play Craps</button>
+        <br>
+        <br>
+        <h3>Play space station sounds</h3>
+        <h4>Warning, it may get loud</h4>
+        <button class="button" onclick="playStation();">Play space station sounds</button>
+    </body>
+
+</html>
