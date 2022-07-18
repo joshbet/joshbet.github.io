@@ -71,7 +71,10 @@ function updateDisplay(){
     
     //record and display time data
     theTime = new Date();
-    document.getElementById("clockTime").innerHTML = theTime.getHours() + ":" + theTime.getMinutes() + ":" + theTime.getSeconds();
+    document.getElementById("clockTime").innerHTML = 
+    theTime.getHours() + ":" 
+    + (theTime.getMinutes() < 10 ? "0" + theTime.getMinutes() : theTime.getMinutes()) +  ":"
+    + (theTime.getSeconds() < 10 ? "0" + theTime.getSeconds() : theTime.getSeconds());
 
 
 
