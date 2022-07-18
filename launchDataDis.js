@@ -68,6 +68,13 @@ function dataRow(legend, value, units){
 //updateDisplay to tie it all together
 
 function updateDisplay(){
+    
+    //record and display time data
+    theTime = new Date();
+    document.getElementById("clockTime").innerHTML = theTime.getHours() + ":" + theTime.getMinutes() + ":" + theTime.getSeconds();
+
+
+
     var timeRead = data[index].time_seconds;
     //update table..
 
