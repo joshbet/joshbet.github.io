@@ -24,3 +24,15 @@ body {
 .dtable{
     background: whitesmoke;
 }
+
+.nav{
+    color: magenta;
+}
+
+.nav2{
+    color: red;
+}
+
+.tableSpace{
+    padding-right: 25px;
+  }

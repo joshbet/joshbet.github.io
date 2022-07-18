@@ -26,3 +26,7 @@ body{
     border-style: outset;
     border-radius: 5px;
 }
+
+.nav{
+    color: magenta;
+}
