@@ -71,7 +71,9 @@ function updateDisplay(){
     
     //record and display time data
     theTime = new Date();
-    document.getElementById("clockTime").innerHTML = 
+    
+    //Print current time to the webpage
+    document.getElementById("clockTime").innerHTML =  
     theTime.getHours() + ":" 
     + (theTime.getMinutes() < 10 ? "0" + theTime.getMinutes() : theTime.getMinutes()) +  ":"
     + (theTime.getSeconds() < 10 ? "0" + theTime.getSeconds() : theTime.getSeconds());
@@ -79,7 +81,7 @@ function updateDisplay(){
 
 
     var timeRead = data[index].time_seconds;
-    //update table..
+    //update table.
 
     if(timeRead >= 10){
             document.getElementById("data").rows["seconds"].innerHTML =
@@ -125,7 +127,7 @@ function updateDisplay(){
             document.getElementById("data").rows["gyroZ"].innerHTML =
             dataRow("gyroZ", data[index].gyroZ, " ");
     }
-
+//Get data every 5 seconds to reload the table
     if(index <  500){
         index++;
     } else {
